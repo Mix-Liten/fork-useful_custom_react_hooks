@@ -1,5 +1,5 @@
-import { useEffect, useRef } from "react"
-import useRenderCount from "../27-useRenderCount/useRenderCount"
+import { useEffect, useRef } from 'react'
+import useRenderCount from '../27-useRenderCount/useRenderCount'
 
 export default function useDebugInformation(componentName, props) {
   const count = useRenderCount()
@@ -25,7 +25,7 @@ export default function useDebugInformation(componentName, props) {
   useEffect(() => {
     previousProps.current = props
     lastRenderTimestamp.current = Date.now()
-    console.log("[debug-info]", componentName, info)
+    console.log('[debug-info]', componentName, info)
   })
 
   return info

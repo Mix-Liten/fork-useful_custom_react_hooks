@@ -1,6 +1,6 @@
-import useDebugInformation from "./useDebugInformation"
-import useToggle from "../1-useToggle/useToggle"
-import { useState } from "react"
+import useDebugInformation from './useDebugInformation'
+import useToggle from '../1-useToggle/useToggle'
+import { useState } from 'react'
 
 export default function DebugInformationComponent() {
   const [boolean, toggle] = useToggle(false)
@@ -10,15 +10,13 @@ export default function DebugInformationComponent() {
     <>
       <ChildComponent boolean={boolean} count={count} />
       <button onClick={toggle}>Toggle</button>
-      <button onClick={() => setCount(prevCount => prevCount + 1)}>
-        Increment
-      </button>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>Increment</button>
     </>
   )
 }
 
 function ChildComponent(props) {
-  const info = useDebugInformation("ChildComponent", props)
+  const info = useDebugInformation('ChildComponent', props)
 
   return (
     <>

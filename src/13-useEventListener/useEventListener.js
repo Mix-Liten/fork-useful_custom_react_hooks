@@ -1,10 +1,6 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from 'react'
 
-export default function useEventListener(
-  eventType,
-  callback,
-  element = window
-) {
+export default function useEventListener(eventType, callback, element = window) {
   const callbackRef = useRef(callback)
 
   useEffect(() => {

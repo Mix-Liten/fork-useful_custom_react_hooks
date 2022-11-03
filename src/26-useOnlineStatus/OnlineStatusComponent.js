@@ -1,4 +1,4 @@
-import useOnlineStatus from "./useOnlineStatus"
+import useOnlineStatus from './useOnlineStatus'
 
 export default function OnlineStatusComponent() {
   const online = useOnlineStatus()
